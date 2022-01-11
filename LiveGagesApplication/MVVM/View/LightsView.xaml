@@ -1,0 +1,156 @@
+﻿<UserControl x:Class="LiveGagesApplication.MVVM.View.LightsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LiveGagesApplication.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="722.811" d:DesignWidth="1310.432">
+    <Grid Margin="100,0,216.4,0.2">
+        <Viewbox Margin="-9,82,7,-84">
+            <Canvas  Height="101" Width="104">
+                <Ellipse Height="31" Width="33" Canvas.Left="0" Canvas.Top="20" StrokeThickness="0.5" Stroke="Gray">
+                    <Ellipse.Fill>
+                        <LinearGradientBrush x:Name="linierGardiantBrush" StartPoint="0.5 , 1" EndPoint="1, 0" SpreadMethod="Pad">
+                            <GradientStop Color="#ff071923" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse Canvas.Left="4" Canvas.Top="23" Width="26" Height="24" Stroke="Gray" >
+                    <Ellipse.Fill>
+                        <LinearGradientBrush StartPoint="1, 0.5" EndPoint="0,1" SpreadMethod="Pad">
+                            <GradientStop Color="#ff071923" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse Canvas.Left="7" Canvas.Top="26" Width="19" Height="19" RenderTransformOrigin="0.235,1.467" >
+                    <Ellipse.Fill>
+                        <RadialGradientBrush Center="0.6, 0.35" GradientOrigin="0.6, 0.35" RadiusY="0.65" RadiusX="0.65" >
+                            <RadialGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.35" CenterX="0.6" ScaleY="1" ScaleX="1"/>
+                                    <SkewTransform AngleX="0" AngleY="0" CenterX="0.6" CenterY="0.35"/>
+                                    <RotateTransform CenterX="0.6" CenterY="0.35" Angle="-4.447"/>
+                                    <TranslateTransform X="0" Y="0"/>
+                                </TransformGroup>
+                            </RadialGradientBrush.RelativeTransform>
+                            <GradientStop Color="White" Offset="0"/>
+                            <GradientStop Color="{Binding CurrentReadyLightValue, Mode=TwoWay}" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+
+                <Grid Margin="5 0 0 0" Height="49" Canvas.Left="60" Canvas.Top="9" Width="47">
+
+                    <Ellipse Canvas.Left="54" Canvas.Top="1" StrokeThickness="0.5" Stroke="Gray" RenderTransformOrigin="0.5,0.5" Margin="-12,11,28,6">
+                        <Ellipse.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-0.9"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Ellipse.RenderTransform>
+                        <Ellipse.Fill>
+                            <LinearGradientBrush x:Name="linierGardiantBrush1" StartPoint="0.5 , 1" EndPoint="1, 0" SpreadMethod="Pad">
+                                <GradientStop Color="#ff071923" Offset="0"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <Ellipse Canvas.Left="58" Canvas.Top="6" Stroke="Gray" Margin="-9,14,31,9" >
+                        <Ellipse.Fill>
+                            <LinearGradientBrush StartPoint="1, 0.5" EndPoint="0,1" SpreadMethod="Pad">
+                                <GradientStop Color="#ff071923" Offset="0"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <Ellipse Canvas.Left="61" Canvas.Top="8" Height="19" RenderTransformOrigin="-0.158,0.841" Margin="-6,18,34,0" VerticalAlignment="Top" >
+                        <Ellipse.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleY="0.79"/>
+                                <RotateTransform/>
+                                <TranslateTransform Y="-0.048"/>
+                            </TransformGroup>
+                        </Ellipse.RenderTransform>
+                        <Ellipse.Fill>
+                            <RadialGradientBrush Center="0.6, 0.35" GradientOrigin="0.6, 0.35" RadiusY="0.65" RadiusX="0.65" >
+                                <RadialGradientBrush.RelativeTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform CenterY="0.35" CenterX="0.6" ScaleY="1" ScaleX="1"/>
+                                        <SkewTransform AngleX="0" AngleY="0" CenterX="0.6" CenterY="0.35"/>
+                                        <RotateTransform CenterX="0.6" CenterY="0.35" Angle="-4.447"/>
+                                        <TranslateTransform X="0" Y="0"/>
+                                    </TransformGroup>
+                                </RadialGradientBrush.RelativeTransform>
+                                <GradientStop Color="White" Offset="0"/>
+                                <GradientStop Color="{Binding CurrentEngLightValue, Mode=TwoWay}" Offset="1"/>
+                            </RadialGradientBrush>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <Grid Margin="0 0 0 0">
+
+                        <Ellipse StrokeThickness="0.5" Stroke="Gray" RenderTransformOrigin="0.5,0.5" Margin="43,11,-26.8,6.8">
+                            <Ellipse.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-0.9"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Ellipse.RenderTransform>
+                            <Ellipse.Fill>
+                                <LinearGradientBrush x:Name="linierGardiantBrush2" StartPoint="0.5 , 1" EndPoint="1, 0" SpreadMethod="Pad">
+                                    <GradientStop Color="#ff071923" Offset="0"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Ellipse Stroke="Gray" Margin="46,14,-23.8,10.8" >
+                            <Ellipse.Fill>
+                                <LinearGradientBrush StartPoint="1, 0.5" EndPoint="0,1" SpreadMethod="Pad">
+                                    <GradientStop Color="#ff071923" Offset="0"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Ellipse Height="19" RenderTransformOrigin="-0.158,0.841" Margin="49,17,-20.8,0" VerticalAlignment="Top" >
+                            <Ellipse.Fill>
+                                <RadialGradientBrush Center="0.6, 0.35" GradientOrigin="0.6, 0.35" RadiusY="0.65" RadiusX="0.65" >
+                                    <RadialGradientBrush.RelativeTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform CenterY="0.35" CenterX="0.6" ScaleY="1" ScaleX="1"/>
+                                            <SkewTransform AngleX="0" AngleY="0" CenterX="0.6" CenterY="0.35"/>
+                                            <RotateTransform CenterX="0.6" CenterY="0.35" Angle="-4.447"/>
+                                            <TranslateTransform X="0" Y="0"/>
+                                        </TransformGroup>
+                                    </RadialGradientBrush.RelativeTransform>
+                                    <GradientStop Color="White" Offset="0"/>
+                                    <GradientStop Color="{Binding CurrentCoPillotLightValue, Mode=TwoWay}" Offset="1"/>
+                                </RadialGradientBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+
+                </Grid>
+
+
+            </Canvas>
+
+        </Viewbox>
+
+        <TextBlock FontSize="35"  TextAlignment="Center" HorizontalAlignment="Left" Height="62" Margin="811,111,-196,0" TextWrapping="Wrap" Text="Light - Copilot" Foreground="White" VerticalAlignment="Top" Width="379" RenderTransformOrigin="0.504,0.048"/>
+        <TextBlock FontSize="35"  TextAlignment="Center" HorizontalAlignment="Left" Height="62" Margin="430,116,0,0" TextWrapping="Wrap" Text="Light - Eng Cut" Foreground="White" VerticalAlignment="Top" Width="338"/>
+        <TextBlock FontSize="35"  TextAlignment="Center" HorizontalAlignment="Left" Height="62" Margin="68,122,0,0" TextWrapping="Wrap" Text="Light - Ready" Foreground="White" VerticalAlignment="Top" Width="338"/>
+        <Image  Source="C:\Users\gilie\source\repos\LiveGagesApplication\LiveGagesApplication\Images\copilot-removebg-preview.png" Margin="1094,103,-216,541" RenderTransformOrigin="3.9,-2.366"></Image>
+        <Image  Source="C:\Users\gilie\source\repos\LiveGagesApplication\LiveGagesApplication\Images\EngIcon-removebg-preview.png" Margin="699,117,183,539" RenderTransformOrigin="3.9,-2.366"></Image>
+        <Image  Source="C:\Users\gilie\source\repos\LiveGagesApplication\LiveGagesApplication\Images\readyIcon-removebg-preview.png" Margin="325,129,593,537" RenderTransformOrigin="3.9,-2.366"></Image>
+
+    </Grid>
+    
+
+</UserControl>

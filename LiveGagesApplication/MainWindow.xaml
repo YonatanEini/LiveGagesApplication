@@ -1,0 +1,64 @@
+﻿<Window x:Class="LiveGagesApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LiveGagesApplication"
+        xmlns:viewModel="clr-namespace:LiveGagesApplication.MVVM.ViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow"  Height="722.811"
+        Width="1468.432"
+        Background="#2A2A2A"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Border Height="720"
+                Background="White"
+                Width="210"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                CornerRadius="20"
+                BorderBrush="#FFFFFF"
+                 Margin="5,-1,1253.8,0"
+                
+                />
+        <TextBlock Width="207" FontSize="35" TextAlignment="Center"
+                   Foreground="Black"
+                   Name="mainWindowTitle"
+                   x:FieldModifier="public"
+                   Text="Live Data"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Center"
+                  Height="47" Margin="-1,0,1262.8,660.2" RenderTransformOrigin="0.585,0.473"></TextBlock>
+        <ContentControl  Content="{Binding CurrentView}" HorizontalAlignment="Left" Height="701" Margin="93,11,0,0" VerticalAlignment="Top" Width="1339"/>
+        <StackPanel Margin="0 90 0 0">
+            <RadioButton Content="Speed And Height"
+                             Height="50"
+                         HorizontalContentAlignment="Center"
+                         VerticalContentAlignment="Center"
+                            Foreground="Black"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             FontFamily="/Fonts/#Poppins"
+                              Command="{Binding SpeedHeightViewCommand}" Margin="14,0,1274.8,0"   
+                         />
+            <RadioButton Content="Live Lights"
+                             Height="50"
+                             Foreground="Black"
+                             Style="{StaticResource MenuButtonTheme}"
+                             FontSize="14"
+                               FontFamily="/Fonts/#Poppins" Margin="12,0,1274.8,0"
+                             Command="{Binding LightsViewCommand}"   
+
+                            />
+
+        </StackPanel>
+        <Image  Source="Images/Bamza_108.png"  Margin="-345,549,914.8,43.2"  />
+        <Image  Source="Images/lightsIcon-removebg-preview.png" Margin="-16,142,1393.8,540.2" RenderTransformOrigin="0.624,0.183"  />
+        <Image  Source="Images/dataIcon-removebg-preview.png"  RenderTransformOrigin="0.624,0.183" Margin="14,84,1411.8,571.2"  />
+    </Grid>
+</Window>
